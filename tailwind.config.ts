@@ -38,6 +38,9 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        gallery: {
+          DEFAULT: 'hsl(var(--gallery-bg))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

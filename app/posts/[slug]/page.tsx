@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { getPostBySlug } from '@/lib/actions';
 import { akronim } from '@/lib/fonts';
 
-
 export default async function PostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const post = await getPostBySlug(slug);
@@ -14,7 +13,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   }
 
   return (
-    <main className="min-h-screen bg-primary">
+    <main className="min-h-screen bg-background">
       <div className={"mx-auto max-w-7xl px-6 py-16"}>
         <Link 
           href="/posts" 
@@ -27,7 +26,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
           {/* Left Column - Image */}
           <div className="flex flex-col gap-4">
             {post.imageUrl && (
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-secondary border border-border">
+              <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-card">
                 <Image
                   src={post.imageUrl || "/placeholder.svg"}
                   alt={post.title}
@@ -54,18 +53,18 @@ export default async function PostPage({ params }: { params: { slug: string } })
           {/* Right Column - Product Details */}
           <div className="flex flex-col gap-8">
             <header>
-              <h1 className={`text-5xl lg:text-6xl text-primary-foreground mb-6 leading-tight leading-15 ${akronim.className}`}>
+              <h1 className={`text-5xl lg:text-6xl text-foreground mb-6 leading-tight ${akronim.className}`}>
                 {post.title}
               </h1>
               {post.price !== undefined && (
-                <div className="text-4xl font-bold text-primary-foreground mb-8">
+                <div className="text-4xl font-bold text-foreground mb-8">
                   ${post.price.toFixed(2)}
                 </div>
               )}
             </header>
 
             <div>
-              <h2 className="text-xl font-semibold text-primary-foreground mb-2.5">
+              <h2 className="text-xl font-semibold text-foreground mb-2.5">
                 Description
               </h2>
               <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap text-base">
@@ -73,7 +72,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
               </p>
             </div>
 
-            <button className="w-full bg-accent hover:bg-accent/80 text-accent-foreground font-bold text-xl py-4 rounded-lg transition-colors cursor-pointer">
+            <button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl py-4 rounded-lg transition-colors cursor-pointer">
               Buy Now
             </button>
           </div>

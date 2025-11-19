@@ -8,7 +8,7 @@ export default async function HomePage() {
 
   return (
     <main className="min-h-screen bg-primary">
-      <div className="container mx-auto px-4 py-8 bg-secondary-foreground">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-2 gap-5 auto-rows-[400px]">
           {posts.map((post, index) => {
             const isFeatured = index % 3 === 0;
@@ -20,13 +20,13 @@ export default async function HomePage() {
                   isFeatured ? "row-span-2" : ""
                 }`}
               >
-                <div className="absolute inset-0 w-full h-full overflow-hidden bg-muted">
+                <div className="absolute inset-0 w-full h-full overflow-hidden bg-gallery">
                   {post.imageUrl && (
                     <Image
                       src={post.imageUrl || "/placeholder.svg"}
                       alt={post.title}
                       fill
-                      className="object-cover object-center transition-transform group-hover:scale-105 bg-foreground"
+                      className="object-cover object-center transition-transform group-hover:scale-105"
                     />
                   )}
                 </div>
