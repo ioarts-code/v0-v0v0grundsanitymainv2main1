@@ -13,7 +13,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   }
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-primary">
       <div className={"mx-auto max-w-7xl px-6 py-16"}>
         <Link 
           href="/posts" 

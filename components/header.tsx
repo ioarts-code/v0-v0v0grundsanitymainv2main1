@@ -2,17 +2,17 @@ import Link from 'next/link';
 
 export function Header() {
   return (
-    <header className="border-gray-200 bg-secondary-foreground border-b-0">
-      <div className="mx-auto max-w-5xl px-6 py-4 text-white">
-        <nav className="flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-black">
-            Blog
+    <header className="border-gray-200 bg-primary border-b-0">
+      <div className="container mx-auto px-4 py-4 text-white">
+        <nav className="flex items-center justify-start">
+          <Link href="/" className="text-3xl font-bold text-white leading-none">
+            IOARTS
           </Link>
           <Link 
             href="/posts" 
-            className="text-sm hover:text-gray-900 transition-colors text-black"
+            className="text-xl font-bold text-white hover:text-gray-300 transition-colors leading-none ml-2 mt-1"
           >
-            View All Posts
+            All Products
           </Link>
         </nav>
       </div>

@@ -7,7 +7,7 @@ export default async function HomePage() {
   const posts = await getPosts();
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-primary">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-2 gap-5 auto-rows-[400px]">
           {posts.map((post) => {
