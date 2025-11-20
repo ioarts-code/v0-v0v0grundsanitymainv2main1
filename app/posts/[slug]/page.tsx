@@ -31,7 +31,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                   src={post.imageUrl || "/placeholder.svg"}
                   alt={post.title}
                   fill
-                  className="object-contain p-8"
+                  className="object-contain p-8 bg-neutral-300"
                 />
               </div>
             )}
@@ -40,7 +40,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
               {["SVG", "PNG", "EPS", "WEBP"].map((format) => (
                 <div
                   key={format}
-                  className="aspect-square bg-transparent rounded-lg transition-colors flex items-center justify-center"
+                  className="aspect-square bg-neutral-300 rounded-lg transition-colors flex items-center justify-center"
                 >
                   <span className={`text-muted-foreground text-[40px] ${akronim.className}`}>
                     {format}
@@ -53,18 +53,18 @@ export default async function PostPage({ params }: { params: { slug: string } })
           {/* Right Column - Product Details */}
           <div className="flex flex-col gap-8">
             <header>
-              <h1 className={`text-5xl lg:text-6xl text-foreground mb-6 leading-tight ${akronim.className}`}>
+              <h1 className={`text-5xl lg:text-6xl text-white mb-6 leading-tight ${akronim.className}`}>
                 {post.title}
               </h1>
               {post.price !== undefined && (
-                <div className="text-4xl font-bold text-foreground mb-8">
+                <div className="text-4xl font-bold text-white mb-8">
                   ${post.price.toFixed(2)}
                 </div>
               )}
             </header>
 
             <div>
-              <h2 className="text-xl font-semibold text-foreground mb-2.5">
+              <h2 className="text-xl font-semibold text-white mb-2.5">
                 Description
               </h2>
               <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap text-base">

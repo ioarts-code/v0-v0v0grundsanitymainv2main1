@@ -23,7 +23,7 @@ export default async function HomePage() {
                       src={post.imageUrl || "/placeholder.svg"}
                       alt={post.title}
                       fill
-                      className="object-cover object-center transition-transform brightness-110 contrast-105 saturate-110 group-hover:scale-105 bg-destructive-foreground"
+                      className="object-cover object-center transition-transform brightness-110 contrast-105 saturate-110 group-hover:scale-105 bg-neutral-300"
                     />
                   )}
                 </div>
