@@ -5,17 +5,17 @@
 /* Simplified to single color definition - edit colors here only */
 :root {
   /* Dark theme colors matching screenshot design */
-  --background: 210 11% 15%;        /* Dark grey background (#26282B) */
-  --foreground: 0 0% 98%;           /* Almost white text (#FAFAFA) */
-  --card: 0 0% 54%;                 /* Light grey for image containers (#8A8A8A) */
-  --card-foreground: 0 0% 98%;      /* White text on cards */
+  --background: 210 11% 15%; /* Dark grey background (#26282B) */
+  --foreground: 0 0% 98%; /* Almost white text (#FAFAFA) */
+  --card: 0 0% 54%; /* Light grey for image containers (#8A8A8A) */
+  --card-foreground: 0 0% 98%; /* White text on cards */
   --popover: 210 11% 15%;
   --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 10%;              /* #1A1A1A - very dark grey */
+  --primary: 0 0% 6%; /* #0F0F0F - darker grey for header and main backgrounds */
   --primary-foreground: 0 0% 98%;
   --secondary: 0 0% 30%;
   --secondary-foreground: 210 11% 15%;
-  --muted: 0 0% 35%;                /* Medium grey for accents (#595959) */
+  --muted: 0 0% 35%; /* Medium grey for accents (#595959) */
   --muted-foreground: 0 0% 65%;
   --accent: 0 0% 98%;
   --accent-foreground: 210 11% 15%;
@@ -26,15 +26,14 @@
   --ring: 0 0% 83%;
   --radius: 0.75rem;
   /* Added dark black background for gallery image containers */
-  --gallery-bg: 0 0% 0%;            /* Dark black for image container backgrounds (#141414) */
+  --gallery-bg: 0 0% 0%; /* Dark black for image container backgrounds (#141414) */
 }
-
 
 @layer base {
   * {
     border-color: hsl(var(--border));
   }
-  
+
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));

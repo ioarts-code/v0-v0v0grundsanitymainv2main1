@@ -6,7 +6,7 @@ import { getPosts } from "@/lib/actions"
 export default async function HomePage() {
   const posts = await getPosts()
 
-  const featuredPost = posts.find((post) => post.title.toLowerCase().includes("legend of zelda pro 2"))
+  const featuredPost = posts.find((post) => post.title.toLowerCase().includes("avicii"))
   const secondPost = posts.find((post) => post.title.toLowerCase().includes("poddtoppen"))
   const thirdPost = posts.find((post) => post.title.toLowerCase().includes("stray"))
 
@@ -33,7 +33,7 @@ export default async function HomePage() {
                       src={post.imageUrl || "/placeholder.svg"}
                       alt={post.title}
                       fill
-                      className="object-cover transition-transform group-hover:scale-105 brightness-110 contrast-105 saturate-110 border-2"
+                      className="object-cover transition-transform group-hover:scale-105 brightness-110 contrast-105 saturate-110 border-2 bg-neutral-300"
                     />
                   )}
                 </div>
