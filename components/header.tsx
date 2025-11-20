@@ -10,7 +10,7 @@ export function Header() {
           </Link>
           <Link 
             href="/posts" 
-            className="text-xl font-bold text-white hover:text-gray-300 transition-colors leading-none ml-2 mt-1"
+            className="text-xl font-bold text-white hover:text-gray-300 transition-colors leading-none mt-1 ml-3"
           >
             All Products
           </Link>
