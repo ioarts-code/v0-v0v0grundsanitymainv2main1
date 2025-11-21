@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-primary border-t border-border">
+    <footer className="bg-primary border-border border-t-0">
       <div className="container mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center justify-between text-sm">
           {/* Links Section */}
@@ -20,7 +20,7 @@ export function Footer() {
 
           {/* Address Section */}
           <div className="text-muted-foreground">
-            <span className="font-medium text-foreground">Address: </span>
+            <span className="font-medium text-muted-foreground">Address: </span>
             Loviselundsvägen 27, 16559 Hässelby, Sweden
           </div>
 
@@ -54,8 +54,8 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-6 pt-6 border-t border-border text-center text-sm text-muted-foreground">
-          Crafted by <span className="text-foreground font-medium">IoDEV</span> © 2026
+        <div className="mt-6 pt-6 text-center text-sm text-muted-foreground border-t border-muted-foreground">
+          Crafted by <span className="font-medium text-muted-foreground">IoDEV</span> © 2026
         </div>
       </div>
     </footer>

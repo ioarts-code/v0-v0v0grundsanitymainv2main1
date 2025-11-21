@@ -29,7 +29,7 @@ export default async function HomePage() {
                 </div>
 
                 <div className="absolute bottom-4 left-4 flex flex-col gap-2 z-10">
-                  <h3 className="text-sm font-medium text-foreground bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-md">
+                  <h3 className="text-sm font-medium backdrop-blur-sm px-3 py-1.5 rounded-md bg-slate-700 text-white">
                     {post.title}
                   </h3>
                   {post.price !== undefined && (
